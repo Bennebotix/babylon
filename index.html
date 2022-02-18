@@ -40,9 +40,9 @@
         box1.scaling.z = (Math.sin(t)+0.5);
         box2.rotation.y = t*2+1;
         box2.rotation.x = t*2+1;
-        box2.scaling.x = (Math.sin(t)+0.5);
-        box2.scaling.y = (Math.sin(t)+0.5);
-        box2.scaling.z = (Math.sin(t)+0.5);
+        box2.scaling.x = (Math.cos(t));
+        box2.scaling.y = (Math.cos(t));
+        box2.scaling.z = (Math.cos(t));
     };
     engine.runRenderLoop(renderLoop);
 </script>
