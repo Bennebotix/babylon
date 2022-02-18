@@ -30,6 +30,7 @@
         scene.render();
         t -= 0.01;
         box.rotation.y = t*2;
+        box.scaling.z = Math.abs(Math.sin(t*2))+0.5;
     };
     engine.runRenderLoop(renderLoop);
 </script>
