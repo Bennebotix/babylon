@@ -19,23 +19,23 @@
     var light = new BABYLON.PointLight("light", new BABYLON.Vector3(5, 5, 0), scene);
 
     var box1 = BABYLON.Mesh.CreateBox("box", 2, scene);
-    box.rotation.x = -0.1;
-    box.rotation.y = -0.2;
+    box1.rotation.x = -0.1;
+    box1.rotation.y = -0.2;
     var box2 = BABYLON.Mesh.CreateBox("box", 2, scene);
     box2.rotation.x = -0.1;
     box2.rotation.y = -0.2;
 
     var boxMaterial = new BABYLON.StandardMaterial("material", scene);
     boxMaterial.emissiveColor = new BABYLON.Color3(0, 0.58, 0.86);
-    box.material = boxMaterial;
+    box1.material = boxMaterial;
     box2.material = boxMaterial
     var t = 0
     var renderLoop = function () {
         scene.render();
         t -= 0.01;
-        box.rotation.y = t*2;
-        box.rotation.x = t*2;
-        box.scaling.y = (Math.abs(Math.sin(t*2))+0.5)*2;
+        box1.rotation.y = t*2;
+        box1.rotation.x = t*2;
+        box1.scaling.y = (Math.abs(Math.sin(t*2))+0.5)*2;
         box2.rotation.y = t*2+1;
         box2.rotation.x = t*2+1;
         box2.scaling.y = (Math.abs(Math.sin(t*2))+0.5)*2+1;
