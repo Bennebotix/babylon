@@ -28,6 +28,8 @@
 
     var renderLoop = function () {
         scene.render();
+        t -= 0.01;
+        box.rotation.y = t*2;
     };
     engine.runRenderLoop(renderLoop);
 </script>
