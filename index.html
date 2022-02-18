@@ -28,6 +28,7 @@
     var boxMaterial = new BABYLON.StandardMaterial("material", scene);
     boxMaterial.emissiveColor = new BABYLON.Color3(0, 0.58, 0.86);
     box.material = boxMaterial;
+    box2.material = boxMaterial
     var t = 0
     var renderLoop = function () {
         scene.render();
@@ -35,6 +36,9 @@
         box.rotation.y = t*2;
         box.rotation.x = t*2;
         box.scaling.y = (Math.abs(Math.sin(t*2))+0.5)*2;
+        box.rotation.y = t*2+1;
+        box.rotation.x = t*2+1;
+        box.scaling.y = (Math.abs(Math.sin(t*2))+0.5)*2+1;
     };
     engine.runRenderLoop(renderLoop);
 </script>
